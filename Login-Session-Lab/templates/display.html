@@ -7,8 +7,28 @@
 </head>
 <body>
 
-<!-- Display the variables from the login session here!
- -->
+<h1> Quotes:</h1>
+
+<ol>
+	{%for i in quote%}
+	<li> {{i}} </li>
+	{%endfor%}
+</ol>
+<h1> Authors:</h1>
+<ol>
+	{%for k in author%}
+	<li> {{k}} </li>
+	{%endfor%}
+</ol>
+<h1> Ages:</h1>
+<ol>
+	{%for l in age%}
+	<li> {{l}} </li>
+	{%endfor%}
+</ol>
+
+
+<a href = "{{url_for('home')}}">Add Quote</a>
 
 </body>
 </html>
