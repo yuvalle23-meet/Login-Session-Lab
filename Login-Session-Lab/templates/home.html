@@ -17,8 +17,15 @@
     <input type="submit" value="Submit">
 </form>
 
-<!-- Create your form here!
- -->
- 
+<form action = "/file" method="POST" enctype="multipart/form-data">
+	<input type="file" name="file1">
+	<input type="submit" value="Submit">
+</form>
+
+{%for i in filename%}
+<img src="{{url_for('static', filename = i)}}" width = '400' height="400">
+{%endfor%}
+
+
 </body>
 </html>
